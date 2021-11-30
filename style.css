@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --primary-color: #fd951f;
+    --bg-color: #130f0d;
+    --text-color: #f0f0f5;
+    --light-color: rgba(255, 255, 255, 0.4);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    background-color: var(--bg-color);
+}
+
+h1, h2, h3, p, span, input, button{
+    color: var(--text-color);
+}
+
+form#main-form{
+    width: 90%;
+    max-width: 500px;
+    margin: 2rem auto;
+    background-color: #272321;
+    padding: 1.5rem 2.5rem;
+    border-radius: 5px;
+}
+
+form#main-form h2{
+    margin-bottom: 2rem;
+}
+
+form#main-form div.input{
+    margin-bottom: 1.7rem;
+    position: relative;
+}
+
+form#main-form div.input input, form#main-form button{
+    width: 100%;
+    outline: none;
+    border: none;
+    appearance: none;    
+    padding: 1rem 0.3rem;
+    background-color: transparent;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+form#main-form button{
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+form#main-form button:hover{
+    background-color: #f78a0e;
+}
+
+
+
+form#main-form div.input input ~ label{
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color:rgba(255, 255, 255, 0.6);
+    transition: .4s;
+}
+
+form#main-form div.input input:valid ~ label, 
+form#main-form div.input input:focus ~ label{
+    transform: translateY(-24px);
+    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
+}
+
+span.error{
+    background-color: rgba(255, 0, 0, 0.3);
+    display: flex;
+    padding: 0;
+}
+
+span.error.active{
+    padding: 0.3rem;
+    border: 1px solid red;
+}
+
