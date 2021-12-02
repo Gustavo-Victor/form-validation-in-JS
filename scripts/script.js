@@ -5,7 +5,6 @@ mainForm.addEventListener('submit', (event) => {
     event.preventDefault();
     window.alert('Your data has been sent succesfully!');
     fields.forEach(field => {
-        const label = field.parentNode.querySelector('label');
         field.value = '';
         field.style.borderColor = '#fd951f';
     });
